@@ -7,9 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Google/SignIn.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <GIDSignInUIDelegate>
 
+
+@property (weak, nonatomic) IBOutlet GIDSignInButton *signInButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *signOutButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *disconnectButton;
+
+@property (weak, nonatomic) IBOutlet UILabel *statusText;
 
 @end
 
